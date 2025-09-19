@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Job Application</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="phone">Phone:</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        maxlength="10"
+        pattern="\d{10}"
+        title="Please enter a 10-digit phone number"
+        required
+      /><br /><br />
+
+      <label for="resume">Resume:</label>
+      <input
+        type="file"
+        id="resume"
+        name="resume"
+        accept=".pdf,.doc,.docx"
+        title="accepted type .pdf,.doc,.docx"
+        required
+      />
+      <br /><br />
+
+      <label for="experience">Experience:</label>
+      <input type="number" 
+      id="experience" 
+      name="experience" 
+      min="0" max="50" />
+      <!-- <select id="experience" name="experience" required>
+        <option value="" disabled selected>Select</option>
+        <option value="fresher">Fresher</option>
+        <option value="1-3 years">1-3 years</option>
+        <option value="3-5 years">3-5 years</option>
+        <option value="5+ years">5+ years</option>
+      </select> -->
+      <br />
+      <br />
+      <fieldset style="display: inline">
+        <legend>Skills</legend>
+        <label for="skill1">HTML</label>
+        <input type="checkbox" id="skill1" name="skill1" />
+        <label for="skill2">CSS</label>
+        <input type="checkbox" id="skill2" name="skill2" />
+        <label for="skill3">JavaScript</label>
+        <input type="checkbox" id="skill3" name="skill3" />
+      </fieldset>
+      <br />
+      <br />
+
+      <label for="qualification">Highest Education:</label>
+      <select name="qualification" id="qualification">
+        <option value="" disabled selected>Select</option>
+        <option value="highschool">High School</option>
+        <option value="inter">Inter School</option>
+        <option value="diploma">Diploma</option>
+        <option value="bachelor">Bachelor's Degree</option>
+        <option value="master">Master's Degree</option>
+        <option value="phd">PhD</option>
+      </select>
+      <br />
+      <br />
+      <fieldset style="display: inline">
+        <legend>Availability</legend>
+        <label for="radio1">Part Time</label>
+        <input type="radio" id="radio1" name="availability" value="part-time" />
+        <label for="radio2">Full Time</label>
+        <input type="radio" id="radio2" name="availability" value="full-time" />
+      </fieldset>
+      <br />
+      <br />
+      <legend>Additional Comments:</legend>
+      <label for="comment"></label>
+      <textarea name="comment" id="comment"></textarea>
+      <br />
+      <br />
+      <input type="submit" value="Submit Application" />
+    </form>
+  </body>
+</html>

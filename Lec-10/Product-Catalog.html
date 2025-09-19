@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog Home</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .submenu {
+            float: left;
+            overflow: hidden;
+        }
+
+        .submenu .submenubtn {
+            font-size: 17px;
+            border: none;
+            outline: none;
+            color: black;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .topnav a:hover,
+        .submenu:hover .submenubtn,
+        .submenu:hover .submenubtn i {
+            background-color: #18c718;
+        }
+
+        .submenu-content {
+            display: none;
+            position: absolute;
+            left: 0;
+            background-color: #c2cece;
+            width: 50%;
+            z-index: 1;
+        }
+
+        .submenu-content a {
+            float: left;
+            color: black;
+            text-decoration: none;
+        }
+
+        .submenu-content a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .submenu:hover .submenu-content {
+            display: block;
+        }
+
+
+        .topnav {
+            overflow: hidden;
+            background-color: rgb(255, 234, 206);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <header>
+            <table style="width:100%">
+                <tr>
+                    <th><img src="https://cdn5.telesco.pe/file/WlBg2INJ96vIXcJsfWREX4FjAzK2czCm60s_Pusk4N2t-1-mHHFjLRFQy6UUxckbqvrYRmUEpcDVTzaL1bYOqj_kQmyaNPYUMN_yvjLfZpQHdGypQoVJK9xw93yVsZJ4D7-nh6D_SQ8WZF4wymLZtaaenavGEuO88KL7r5una-F4sPpHbrAi2cekbEk1-lUbR0RztQXUeAx2WC8e54ODtHkvRQVe8YQI4GtRxop7_MJ271vDCP35ExNN0K5AjVUO6gcqU98k4KEF0KDI6Sz-hWmd2mx4zlM3ce9dxJg-2HabsxkvZIUTWuYrh1Sm-OKbwvZRUKFMxxDXK0lPYIMzkw.jpg"
+                            alt="logo.png" width="80" height="80" loading="lazy"></th>
+                    <th>
+                        <h1 style="text-align: left;">Product-Catalog</h1>
+                    </th>
+                </tr>
+            </table>
+        </header>
+        <div class="topnav">
+            <a href="#Home">Home</a>
+            <div class="submenu">
+                <button class="submenubtn">Products <i class="fa fa-caret-down"></i>
+                    </i></button>
+                <div class="submenu-content">
+                    <a href="#electronics">Electronics</a>
+                    <a href="#clothing">Clothing</a>
+                    <a href="#books">Books</a>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <div class="container" style="padding:20px;">
+            <h3>Welcome to Product-Catalog</h3>
+            <p>Your one-stop shop for all your needs!</p>
+
+            <table>
+                <tr>
+                    <td>
+                        <nav>
+                            <ul>
+                                <li><a href="#Home">Home</a></li>
+                                <li><a href="#electronics">Electronics</a></li>
+                                <li><a href="#clothing">Clothing</a></li>
+                                <li><a href="#books">Books</a></li>
+                            </ul>
+                        </nav>
+                    </td>
+                </tr>
+            </table>
+
+            <table>
+                <!-- Electronics Section -->
+                <tr>
+                    <td>
+                        <h2 id="electronics">Electronics</h2>
+                        <p>Electronics are devices or systems that operate using electrical signals to perform various
+                            functions. They encompass a wide range of products, from everyday gadgets like smartphones
+                            and laptops to complex systems like televisions and home appliances. Electronics have become
+                            integral to modern life, enabling communication, entertainment, productivity, and more.</p>
+                    </td>
+                    <td>
+                        <img src="Electronic.png" alt="" width="400" height="135">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-left: 20px;">
+                        <p>Price List:</p>
+                        <ul>
+                            <li>Smartphone - $699</li>
+                            <li>Laptop - $999</li>
+                            <li>Headphones - $199</li>
+                        </ul>
+                    </td>
+                </tr>
+                <!-- Clothing Section -->
+                <tr>
+                    <td>
+                        <h2 id="clothing">Clothings</h2>
+                        <p>
+                            Beyond basic physical protection, clothing serves multiple key functions:
+                        </p>
+                        <ul>
+                            <li>Protection: Shields the body from weather elements (cold, heat, rain), rough surfaces,
+                                and specific hazards in different occupations or sports.</li>
+                            <li>Adornment and expression: Serves as a decorative element and a canvas for personal style
+                                and creativity.</li>
+                            <li>Social signaling: Communicates social status, cultural identity, religious affiliation,
+                                and group membership.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <img src="cloths.png" alt="" width="300" height="135">
+                    </td>
+                </tr>
+                <tr style="text-align: center;">
+                    <td >
+                        <p>Price List:</p>
+                        <ul style="text-align: center;">
+                            <li>T-Shirt - $29</li>
+                            <li>Jeans - $59</li>
+                            <li>Jacket - $99</li>
+                        </ul>
+                    </td>
+                </tr>
+                <!-- Books Section -->
+                <tr>
+                    <td>
+                        <h2 id="books">Books</h2>
+                        <p>A book catalog is an organized list of all the bibliographic items in a collection, such as a
+                            personal library. Its primary purpose is to help users find and locate a book by providing
+                            multiple access points, such as author, title, and subject. Whether a simple list or a
+                            complex digital database, a good catalog is a key to navigating any book collection.</p>
+                    </td>
+                    <td>
+                        <img src="books.png" alt="" width="450" height="135">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-bottom: 20px;">
+                        <p>Price List:</p>
+                        <ul>
+                            <li>"The Great Gatsby" - $10</li>
+                            <li>"1984" - $15</li>
+                            <li>"To Kill a Mockingbird" - $12</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <footer style="background-color: rgb(255, 234, 206); padding: 10px; margin-top: 20px;">
+            <p style="text-align: center;">&copy; 2024 Gyan Success Treasury. All rights reserved.
+                <a href="https://www.youtube.com/channel/@gyansuccesstreasury">YouTube</a>
+                <a href="https://www.linkedin.com/in/abdulrahmanaliyt">LinkdIn</a>
+
+            </p>
+        </footer>
+</body>
+
+</html>
