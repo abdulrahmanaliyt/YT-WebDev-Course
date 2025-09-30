@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: #1987d5;
+            border: 2px solid black;
+            margin: 2px;
+            padding: 2px;
+            display: flex;
+            /* flex-direction: column;
+            flex-direction: row;
+            flex-direction: column-reverse; */
+            flex-direction: row;
+            /* flex-wrap: wrap  ; */
+            /* flex-wrap: wrap-reverse; */
+            height: 400px;
+            width: 500px;
+            justify-content: start;
+            /* justify-content:end; */
+            /* justify-content: space-evenly; */
+            /* justify-content: space-around; */
+            /* align-items: stretch; */
+            align-items: start;
+            align-content: start;
+            /* align-content: end; */
+          
+        }         
+        .box{
+            background-color: rgb(225, 56, 140);
+            /* height: 200px;
+            width: 200px; */
+            margin: 2px;
+            padding: 2px;
+           
+        }
+        #box1{
+            background-color: rgb(225, 56, 140);
+            /* order: 5; */
+            /* flex-shrink: 4; */
+            /* flex-grow: 1; */
+            align-self: center;
+        }
+        #box2{
+            background-color: antiquewhite;
+            /* flex-grow: 2; */
+            align-self:last baseline;
+        }
+        #box3{
+            background-color: aquamarine;
+        }
+        #box4{
+            background-color: yellow;
+            /* order: -1; */
+            /* flex-basis: 300px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">A</div>
+        <div class="box" id="box2">B</div>
+        <div class="box" id="box3">C</div>
+        <div class="box" id="box4">D</div>
+    </div>
+
+
+    <!-- /* HOMEWORK
+
+    The flex-flow property is a shorthand property for:
+flex-direction
+flex-wrap
+Note: If the elements are not flexible items, the flex-flow property has no effect. */ -->
+</body>
+</html>
