@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            background-color: antiquewhite;
+            display: flex;
+            flex-direction: row;
+            width: 450px;
+            margin: 20px;
+            padding: 5px;
+        }
+
+        #boxleft{
+            background-color: aqua;
+            border: 1px solid red;
+            width: 47%;
+            margin: 3px;
+            padding: 2px;
+            display: flex;
+            flex-direction: column;
+        }
+        #boxright{
+            background-color: rgb(249, 253, 12);
+            border: 1px solid #ff2a00;
+            margin: 3px;
+            padding: 2px;
+        }
+        p{
+            border: 1px solid orange;
+        }
+        img{
+            height: 100px;
+            width: 100px;
+        }
+        @media (max-width:640px) {
+            .container{
+                flex-direction: column;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="boxleft">
+            <p>Text-1</p>
+            <p>Text-2</p>
+        </div>
+        <div id="boxright">
+            <img 
+            src="Bose.png" 
+            alt="Subhas Chandra Bose" 
+            >
+        </div>
+    </div>    
+</body>
+</html>
