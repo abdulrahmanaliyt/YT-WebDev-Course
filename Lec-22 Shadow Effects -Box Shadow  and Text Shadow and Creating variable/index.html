@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root{
+            --gobal-color: rgb(11, 248, 78);
+            --global-width: 400px;
+        }
+        .container{
+            background-color: antiquewhite;
+            height: 650px;
+            width: 650px;
+            /* width: 650px; */
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            --primary-color: red;  /* Local variable   Define on root for multiline varible */
+            --custom-width:230px;
+            background-color: rgb(90, 253, 204);
+            width: var(--custom-width);
+            height: 330px;
+            border: 1px solix violet;
+            margin: 5px;
+            padding: 10px;
+            /* box-shadow: 10px 10px orange; */
+            /* box-shadow: -10px -10px orange; */
+            /* box-shadow: 10px 10px 50px rgb(222, 16, 16); */
+            /* box-shadow: 10px 1px 5px 20px red; */
+            /* box-shadow: inset 10px 10px 30px rgb(255, 81, 168); */
+            /* box-shadow: 10px 15px var(--primary-color), 15px 28px var(--gobal-color); */
+
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        h2{
+            /* text-shadow: 1.5px 1px 2px red; */
+            /* text-shadow: yellow 2px 1px 1px; */
+            /* text-shadow: yellow 2px 1px; */
+            /* text-shadow: 1px 1px; */
+            text-shadow: yellow 2px 1px 5px, red 2px 10px, blue 2px 20px ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="CodeBee.png" alt="">
+            <h2 >Welcome to CodeBee</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ex, molestias vitae eveniet porro neque ad dicta soluta fuga voluptates hic, inventore placeat, voluptatem iure accusamus optio ipsa esse a?</p>
+        </div>
+    </div>
+</body>
+</html>
