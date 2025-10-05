@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+    <style>
+      .box {
+        height: 400px;
+        width: 400px;
+        background-color: bisque;
+        border: 1px solid black;
+
+        /* transition-property: width; */
+        /* transition-property: all;
+            transition-duration: 4s;
+            transition-delay: 1ms;
+            /* transition-timing-function: linear; */
+        /* transition-timing-function: ease-in; */
+        /* transition-timing-function: ease-out; */
+
+        /* Apply to 1 property */
+        /* property name | duration */
+        /* transition: margin-right 4s; */
+
+        /* property name | duration | delay */
+        /* transition: margin-right 4s 1s; */
+
+        /* property name | duration | easing function */
+        /* transition: margin-right 4s ease-in-out; */
+
+        /* property name | duration | easing function | delay */
+        /* transition: margin-right 4s ease-in-out 1s; */
+
+        /* property name | duration | behavior */
+        /* transition: display 4s allow-discrete; */
+
+        /* Apply to 2 properties */
+        /* transition: margin-right 4s, color 1s; */
+
+        /* Apply to all changed properties */
+/* transition: all 0.5s ease-out allow-discrete; */
+/* transition: 5s linear 50ms; */
+
+transition: width, 2s, height 5s;
+      }
+      .box:hover {
+        height: 1200px;
+        width: 1700px;
+        background-color: rgb(17, 79, 224);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
