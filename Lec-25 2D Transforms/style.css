@@ -1,0 +1,53 @@
+.box{
+    width: 400px;
+    height: 400px;
+    background-color: aqua;
+    border: 2px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    transition: all 3s linear 1ms;
+}
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    /* transform: rotate(45deg); */
+    /* transform:scale(2) ; */
+    /* transform: scale(.5); */
+    /* transform: rotate(-360deg); */
+    /* transform: skew(35deg); */
+    /* transform: skew(-35deg); */
+    /* transform: translate(300px); */
+    /* transform: translate(-300px); */
+
+    /* transform: translate(0px, -300px); */
+    /* transform: translate(200px, -300px); */
+    /* transform: skew(30deg, 20deg); */
+    /* transform: scale3d(2.5, 1.2, 0.3); */
+
+    /* Multiple function values */
+/* transform: translateX(10px) rotate(10deg) translateY(5px); */
+/* transform: perspective(500px) translate3d(10px, 0, 20px) rotateY(30deg); */
+/* transform: translate(50px, 100px); */
+/* transform: scale(2, 3); */
+
+/* The CSS matrix() Function
+The matrix() function combines all the 2D transform functions into one.
+
+The matrix() function take six parameters, containing mathematic functions, which allows you to rotate, scale, move (translate), and skew elements.
+
+The parameters are as follow: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+transform: matrix(1, -0.3, 0, 1, 0, 0);
+
+
+}
+p{
+    font-size: 50px;
+}
