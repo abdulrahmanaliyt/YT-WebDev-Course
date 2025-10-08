@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order-Summary</title>
+
+    <style>
+         *{
+            margin: 0;
+            padding: 0;            
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;                       
+            /* min-height: 600px; */
+            background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cards{
+            width: 350px;
+            height: 570px;
+            background-color: white;
+            border-radius: 20px;
+            /* padding: 20px; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .cards img{
+            width: 100%;
+            height: 30%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        .textbox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* gap: 10px; */
+            /* padding: 20px; */
+            width: 85%;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        .textbox p{
+            gap: 10px;
+        }
+        .amountbox{
+            width: 85%;
+            height: 10%;
+            background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 20px;
+            padding-left: 20px;
+            gap: 15px;
+        }
+        #leftbox{
+            /* width: fit-content; */
+            height: 100%;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            font-size: 17px;
+        }
+        #imagebox img{
+            height: 3.5rem;
+            width: 3.5rem;
+        }
+        .paymetButton{
+            width: 85%;
+            height: 9%;
+            font-size: 1.5rem;
+            color: white;
+            background-color: #06235a;
+            border-radius: 10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(58, 7, 243, 0.753) 0px 8px 16px -8px;            
+        }
+        .cancelbox a{
+            text-decoration: none;
+            color: rgb(63, 62, 62);
+            font-weight: bold;
+            font-size: large;
+            border: .5px solid black;
+            border-radius: 18%;
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cards">
+            <img src="summary.jpg" alt="">
+            <div class="textbox">                
+                <h2>Order Summary</h2>
+                <p>Daily structured notes covering key web development topics, simplified explanations, practical code, and progress tracking for consistent learning growth</p>
+            </div>     
+            <div class="amountbox">
+                <div id="leftbox">
+                    <div id="imagebox"> <img src="music.png" alt="music"></div>
+                    <div id="textamountbox">
+                        <p>Annual Plan</p>
+                        <p>₹599.9/year</p>
+                    </div>
+                </div>
+                <div id="rightbox"> <a href="#">Change</a></div>
+            </div>   
+            <button class="paymetButton">
+                Proceed to Payment
+            </button>   
+            <div class="cancelbox">
+                <a href="#"> Cancel Order </a>
+            </div> 
+        </div>
+    </div>
+</body>
+</html>
