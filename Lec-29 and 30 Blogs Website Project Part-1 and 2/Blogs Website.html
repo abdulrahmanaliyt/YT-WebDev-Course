@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KK Blogs</title>
+    <style>
+         * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      min-height: 100%;  /* allow body to grow if needed */
+      width: 100%;
+    }
+    body {
+      /* background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); */
+      background-size: cover;       /* stretch gradient fully */
+      background-repeat: no-repeat; /* prevent tiling */
+      background-attachment: fixed; /* keep background locked */
+    }
+    a{
+        text-decoration: none;
+    }
+    .container {
+      /* min-height: 95vh;  container always covers screen height */
+      /* width: 100%; */
+      max-width: 65vw;
+      max-height: 65vh;
+      padding: 2rem 1rem;
+      margin: 0 auto;
+      /* background-color: beige; */
+
+    }
+    .header_container{
+        margin-bottom: 2.5rem;
+    }
+    .header_title{
+        margin-bottom: 1rem;
+        font-size: 1.7rem;
+        line-height: 2rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    .header_desc{
+        max-width: 568px;
+        text-align: center;
+        color: rgb(29, 28, 28);
+        margin: 0 auto;
+    }
+    .main_container{
+        
+        display: grid;
+        gap: 1.5rem;
+        /* grid-template-columns: repeat(1,1fr); */
+        grid-template-columns: repeat(auto-fit,minmax(150px,400px));
+        justify-content: center;
+    }
+
+    /* @media (min-width:500px){
+        .main_container{
+        grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @media (min-width:800px){
+        .main_container{
+        grid-template-columns: repeat(3,1fr);
+        }
+    }
+    @media (min-width:1200px){
+        .main_container{
+        grid-template-columns: repeat(4,1fr);
+        }
+    } */
+
+    .card_container{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #d3cccc ;
+        border-radius: 8px;
+        /* overflow: hidden; */
+    }
+    .card_img_container{
+        position: relative;
+        overflow: hidden;
+        height: 11rem;
+    }
+    @media (min-width:768px){
+        .card_img_container{
+        height: 16rem;
+        }
+    }
+    .card_img{
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+    .card_title_container{
+        display: flex;
+        flex-direction: row;
+        padding: 1.5rem;
+    }
+    .card_container .card_img{
+        transform: scale(1.1);
+        transition-duration:200ms ;
+    }
+    .card_container:hover .card_img{
+        transform: scale(1.2);
+        transition-duration: 200ms;
+    }
+    .card_title{
+        font-size: 1rem;
+        font-weight: 6rem;
+        line-height: 1.5rem;
+        color: #000;
+        margin-bottom: .3rem;
+    }
+    .card_title_anchor:hover .card_title{
+        color: blue;
+    }
+    .card_describtion{
+        color: #706565;
+        font-size: 1rem;
+    }
+    .card_footer_container{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .author_container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+    .author_avatar_container{
+        height: 2.5rem;
+        width: 2.5rem;
+        overflow: hidden;
+        border: 1px solid rgb(114, 112, 112);
+        border-radius: 70%;
+        background-color: rgb(196, 190, 183);
+    }
+    .author_info_container{
+        display: flex;
+        flex-direction: column;
+    }
+    .author_name{
+        color: rgb(12, 12, 83);
+    }
+    .author_date{
+        color: rgb(92, 62, 62);
+    }
+    .card_tag_container{
+        font-size: .79rem;
+        border: 1px solid rgb(85, 69, 69);
+        border-radius: 4px;
+        height: 1.5rem;
+        padding: .25rem .5rem;
+        color: gray;
+        /* align-content: center; */
+        
+    }
+    </style>
+</head>
+<body>
+    <div class="body_container">
+        <div class="container">
+            <header class="header_container">
+                <h1 class="header_title">KK Blogs</h1>
+                <p class="header_desc">Khana Kabila Blogs celebrates Indian flavors, traditions, and recipes with a modern twist for food lovers.</p>
+            </header>
+
+            <main class="main_container">
+                <!-- Card 1 start -->
+                <div class="card_container">
+                    <a href="#" class="card_img_container">
+                        <img 
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuxfBNECZiatHvwsUBJHphtRFW5GxeDnbWWA&s" 
+                        alt="image"
+                        class="card_img"
+                        loading="lazy"
+                        >
+                    </a>
+                    <div class="card_title_container">
+                        <a href="#" class="card_title_anchor">
+                            <h2 class="card_title">New In the Kitchen</h2>
+                        </a>
+                        <p class="card_describtion">New In the Kitchen brings simple, creative, and delicious recipes for beginners exploring home cooking.</p>
+                    </div>
+                    <div class="card_footer_container">
+                        <div class="author_container">
+                            <div class="author_avatar_container">
+                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" 
+                                alt="avatar-1"
+                                loading="lazy"
+                                class="author_avatar"
+                                >
+                            </div>
+                            <div class="author_info_container">
+                                <span class="author_name">Abdul Rahman Ali</span>
+                                <span class="author_date">Sep 19, 2025</span>
+                            </div>
+                        </div>
+                        <div class="card_tag_container">
+                            <span>Healthy Foods</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 1 end -->                
+                <!-- Card 2 start -->
+                <div class="card_container">
+                    <a href="#" class="card_img_container">
+                        <img 
+                        src="https://t3.ftcdn.net/jpg/04/81/11/52/240_F_481115296_pB8lEZ1pIcYzjtSmGdZq4K5amn1CreZm.jpg" 
+                        alt="image"
+                        class="card_img"
+                        loading="lazy"
+                        >
+                    </a>
+                    <div class="card_title_container">
+                        <a href="#" class="card_title_anchor">
+                            <h2 class="card_title">New In the Kitchen</h2>
+                        </a>
+                        <p class="card_describtion">New In the Kitchen brings simple, creative, and delicious recipes for beginners exploring home cooking.</p>
+                    </div>
+                    <div class="card_footer_container">
+                        <div class="author_container">
+                            <div class="author_avatar_container">
+                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" 
+                                alt="avatar-1"
+                                loading="lazy"
+                                class="author_avatar"
+                                >
+                            </div>
+                            <div class="author_info_container">
+                                <span class="author_name">Abdul Rahman Ali</span>
+                                <span class="author_date">Sep 19, 2025</span>
+                            </div>
+                        </div>
+                        <div class="card_tag_container">
+                            <span>Technology</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 end -->
+                <!-- Card 3 start -->
+                <div class="card_container">
+                    <a href="#" class="card_img_container">
+                        <img 
+                        src="https://t3.ftcdn.net/jpg/03/25/35/08/240_F_325350805_D8PVU73qs1dj5TdWgm9IpuAjJ7sgHacK.jpg" 
+                        alt="image"
+                        class="card_img"
+                        loading="lazy"
+                        >
+                    </a>
+                    <div class="card_title_container">
+                        <a href="#" class="card_title_anchor">
+                            <h2 class="card_title">New In the Kitchen</h2>
+                        </a>
+                        <p class="card_describtion">New In the Kitchen brings simple, creative, and delicious recipes for beginners exploring home cooking.</p>
+                    </div>
+                    <div class="card_footer_container">
+                        <div class="author_container">
+                            <div class="author_avatar_container">
+                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" 
+                                alt="avatar-1"
+                                loading="lazy"
+                                class="author_avatar"
+                                >
+                            </div>
+                            <div class="author_info_container">
+                                <span class="author_name">Abdul Rahman Ali</span>
+                                <span class="author_date">Sep 19, 2025</span>
+                            </div>
+                        </div>
+                        <div class="card_tag_container">
+                            <span>Technology</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 end -->                 
+                <!-- Card 4 start -->
+                <div class="card_container">
+                    <a href="#" class="card_img_container">
+                        <img 
+                        src="https://t3.ftcdn.net/jpg/08/17/08/64/240_F_817086445_E1Ma48s9RDE1XoDE6cGO1rsNM8aKTyRJ.jpg" 
+                        alt="image"
+                        class="card_img"
+                        loading="lazy"
+                        >
+                    </a>
+                    <div class="card_title_container">
+                        <a href="#" class="card_title_anchor">
+                            <h2 class="card_title">New In the Kitchen</h2>
+                        </a>
+                        <p class="card_describtion">New In the Kitchen brings simple, creative, and delicious recipes for beginners exploring home cooking.</p>
+                    </div>
+                    <div class="card_footer_container">
+                        <div class="author_container">
+                            <div class="author_avatar_container">
+                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" 
+                                alt="avatar-1"
+                                loading="lazy"
+                                class="author_avatar"
+                                >
+                            </div>
+                            <div class="author_info_container">
+                                <span class="author_name">Abdul Rahman Ali</span>
+                                <span class="author_date">Sep 19, 2025</span>
+                            </div>
+                        </div>
+                        <div class="card_tag_container">
+                            <span>Technology</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 end -->                 
+                <!-- Card 5 start -->
+                <div class="card_container">
+                    <a href="#" class="card_img_container">
+                        <img 
+                        src="https://as2.ftcdn.net/v2/jpg/16/39/25/01/1000_F_1639250151_uxE8pI2cVOiCWz6AhHuyHgHrnE7lUhwm.jpg" 
+                        alt="image"
+                        class="card_img"
+                        loading="lazy"
+                        >
+                    </a>
+                    <div class="card_title_container">
+                        <a href="#" class="card_title_anchor">
+                            <h2 class="card_title">New In the Kitchen</h2>
+                        </a>
+                        <p class="card_describtion">New In the Kitchen brings simple, creative, and delicious recipes for beginners exploring home cooking.</p>
+                    </div>
+                    <div class="card_footer_container">
+                        <div class="author_container">
+                            <div class="author_avatar_container">
+                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" 
+                                alt="avatar-1"
+                                loading="lazy"
+                                class="author_avatar"
+                                >
+                            </div>
+                            <div class="author_info_container">
+                                <span class="author_name">Abdul Rahman Ali</span>
+                                <span class="author_date">Sep 19, 2025</span>
+                            </div>
+                        </div>
+                        <div class="card_tag_container">
+                            <span>Technology</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 end -->                 
+                <!-- Card 6 start -->
+                <div class="card_container">
+                    <a href="#" class="card_img_container">
+                        <img 
+                        src="https://t3.ftcdn.net/jpg/14/86/70/22/240_F_1486702270_Dbg4BBKeGhzLrBzvAT5Q2mi88ovRqsaJ.jpg" 
+                        alt="image"
+                        class="card_img"
+                        loading="lazy"
+                        >
+                    </a>
+                    <div class="card_title_container">
+                        <a href="#" class="card_title_anchor">
+                            <h2 class="card_title">New In the Kitchen</h2>
+                        </a>
+                        <p class="card_describtion">New In the Kitchen brings simple, creative, and delicious recipes for beginners exploring home cooking.</p>
+                    </div>
+                    <div class="card_footer_container">
+                        <div class="author_container">
+                            <div class="author_avatar_container">
+                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" 
+                                alt="avatar-1"
+                                loading="lazy"
+                                class="author_avatar"
+                                >
+                            </div>
+                            <div class="author_info_container">
+                                <span class="author_name">Abdul Rahman Ali</span>
+                                <span class="author_date">Sep 19, 2025</span>
+                            </div>
+                        </div>
+                        <div class="card_tag_container">
+                            <span>Technology</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 end -->                 
+                <!-- Card 7 start -->
+                <div class="card_container">
+                    <a href="#" class="card_img_container">
+                        <img 
+                        src="https://t3.ftcdn.net/jpg/14/27/81/58/240_F_1427815839_Xi5ttfRj6oaRHGGAodRLzeCSSKLDXJRF.jpg" 
+                        alt="image"
+                        class="card_img"
+                        loading="lazy"
+                        >
+                    </a>
+                    <div class="card_title_container">
+                        <a href="#" class="card_title_anchor">
+                            <h2 class="card_title">New In the Kitchen</h2>
+                        </a>
+                        <p class="card_describtion">New In the Kitchen brings simple, creative, and delicious recipes for beginners exploring home cooking.</p>
+                    </div>
+                    <div class="card_footer_container">
+                        <div class="author_container">
+                            <div class="author_avatar_container">
+                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" 
+                                alt="avatar-1"
+                                loading="lazy"
+                                class="author_avatar"
+                                >
+                            </div>
+                            <div class="author_info_container">
+                                <span class="author_name">Abdul Rahman Ali</span>
+                                <span class="author_date">Sep 19, 2025</span>
+                            </div>
+                        </div>
+                        <div class="card_tag_container">
+                            <span>Technology</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 7 end -->                 
+                <!-- Card 8 start -->
+                <div class="card_container">
+                    <a href="#" class="card_img_container">
+                        <img 
+                        src="https://t4.ftcdn.net/jpg/13/69/10/59/240_F_1369105903_VoD918CjMQorf99XROMM1d96Vh6Bven1.jpg" 
+                        alt="image"
+                        class="card_img"
+                        loading="lazy"
+                        >
+                    </a>
+                    <div class="card_title_container">
+                        <a href="#" class="card_title_anchor">
+                            <h2 class="card_title">New In the Kitchen</h2>
+                        </a>
+                        <p class="card_describtion">New In the Kitchen brings simple, creative, and delicious recipes for beginners exploring home cooking.</p>
+                    </div>
+                    <div class="card_footer_container">
+                        <div class="author_container">
+                            <div class="author_avatar_container">
+                                <img src="https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64" 
+                                alt="avatar-1"
+                                loading="lazy"
+                                class="author_avatar"
+                                >
+                            </div>
+                            <div class="author_info_container">
+                                <span class="author_name">Abdul Rahman Ali</span>
+                                <span class="author_date">Sep 19, 2025</span>
+                            </div>
+                        </div>
+                        <div class="card_tag_container">
+                            <span>Technology</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 8 end -->
+                 
+            </main>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- 
+
+https://api.dicebear.com/7.x/notionists/svg?seed=John?size=64
+https://source.unsplash.com/random/600×400?technology -->
