@@ -183,6 +183,17 @@
     .tour-button{
         background-color: var(--dark-gray);
     }
+    .start-button {
+        border: none;
+        border-radius: .375rem;
+        background-color: var(--primary-color);
+        color: var(--background-color);
+        transition: all .1s;
+        padding: .75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 500; 
+    }
+    
     .start-button:hover{
         background-color: lightskyblue;        
     }
@@ -266,7 +277,7 @@
         border: none;
         border-radius: .625rem;
         margin-top: 2rem;
-        margin-bottom: 10rem;
+        margin-bottom: 2rem;
         padding: 1.5rem 2.5rem;
     }
   
