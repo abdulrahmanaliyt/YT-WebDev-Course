@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Transform</title>
+    <style>
+          *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            min-height: 100%;
+        }
+        .container{
+            /* width: 100%;
+            height: 100%; */
+            padding: 4rem;
+            background-color: blanchedalmond;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);           
+            justify-items: center;            
+            gap: 9rem;
+        }
+        .item{
+            height: 150px;
+            width: 150px;            
+            background-color: lawngreen;
+            border-top: 2px solid black;
+            border-bottom: 2px solid red;
+            border-left: 2px solid orange;
+            border-right: 2px solid rgb(0, 238, 255);
+            
+            display: flex;
+           justify-content: center;
+           align-items: center;
+           font-size: 1.3rem;
+        }
+        #RotateX{
+            transform: RotateX(45deg);
+        }
+        #RotateY{
+            transform: rotateY(-45deg);
+        }
+        #RotateZ{
+            transform: rotateZ(45deg);
+        }
+        #TranslateX{
+            transform: translateX(40px);
+        }
+        #TranslateY{
+            transform: translateY(40px);
+        }
+        #TranslateZ{
+            transform: perspective(30px) translateZ(10px); /*nothig happen without setting persprctive and perspective should be greater then translate vale*/
+        }
+        #ScaleX{
+            transform: ScaleX(1.3) ;
+        }
+        #ScaleY{
+            transform: scaleY(1.3);            
+        }
+        #ScaleZ{
+            transform: perspective(300px) scaleZ(5) rotateY(30deg);
+        }
+        #skewx{
+            transform: skewX(35deg);
+        }
+        #skewy{
+            transform: skewY(35deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="RotateX">RotateX</div>
+        <div class="item" id="RotateY">RotateY</div>
+        <div class="item" id="RotateZ">RotateZ</div>
+        <div class="item" id="TranslateX">TranslateX</div>
+        <div class="item" id="TranslateY">TranslateY</div>
+        <div class="item" id="TranslateZ">TranslateZ</div>
+        <div class="item" id="ScaleX">ScaleX</div>
+        <div class="item" id="ScaleY">ScaleY</div>
+        <div class="item" id="ScaleZ">ScaleZ</div>
+        <div class="item" id="skewx">skewX</div>
+        <div class="item" id="skewy">skewY</div>
+    </div>
+</body>
+</html>
